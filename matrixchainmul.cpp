@@ -10,7 +10,7 @@ int chain(int a[],int n){
 		for(int j=0;j<p-i;j++){
 			int y=j+i;
 			m[j][y]=INT_MAX;
-			for(int k=j;k<=y-1;k++){
+			for(int k=j;k<y;k++){
 				int b=m[j][k]+m[k+1][y]+(a[j]*a[k+1]*a[y+1]);
 				if(b<m[j][y]){
 					m[j][y]=b;
